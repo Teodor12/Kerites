@@ -23,20 +23,19 @@ def feladat_1():
 def feladat_2():
     print("2. feladat")
     print("Az eladott telkek szama: ", len(properties))
+    print()
 
 
 def feladat_3():
     print("3. feladat")
-    datas = properties[-1].split(" ")
-    side = datas[0]
 
-    if(side == "0"):
+    if (properties[-1].split(" ")[0] == "0"):
         print("Paros oldalon adtak el az utolso telket!")
         print("Az utolso telek szama: ", len(even_properties)*2)
     else:
         print("Paratlan oldalon adtak el az utolso telket!")
         print("Az utolso telek szama: ", len(odd_properties)*2 - 1)
-
+    print()
 
 def feladat_4():
     print("4. feladat")
@@ -50,6 +49,7 @@ def feladat_4():
             break
         number +=2
         previous_color = current_color
+    print()
    
         
 def feladat_5():
@@ -78,11 +78,11 @@ def feladat_5():
     colors.remove(color_1)
     colors.remove(color_2)
     print("Egy lehetseges festesi szin: ", random.choice(colors))
+    print()
 
         
     
 def feladat_6():
-    print("6. feladat")
     output_file = open("utcakep.txt","w")
     for property in odd_properties:
         datas = property.split(" ")
